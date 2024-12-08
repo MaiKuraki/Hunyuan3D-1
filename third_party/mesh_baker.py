@@ -116,7 +116,7 @@ class MeshBaker:
                     aligned_cond, cond_info, _ = self.align_and_check(cond_pil, rendered_views[0], align_times=self.align_times)
                     if cond_info is None: continue
                     aligned_cond.convert("RGB").save(save_folder + f'/aligned_cond.jpg')
-                    if front == 'multi-view front view':
+                    if front == 'input image':
                         aligned_img, info = aligned_cond, cond_info
                         print("Using input image to bake front view")
         
